@@ -15,6 +15,7 @@ sysinfo.txt
 
 ###
 # VS/MD solution and project files
+.vs/
 ###
 [Ee]xportedObj/
 *.booproj
@@ -27,6 +28,9 @@ sysinfo.txt
 *.userprefs
 *.pidb
 .DS_Store
+.consulo/
+*.tmp
+*.pdb
 
 ###
 # OS generated
@@ -39,3 +43,13 @@ sysinfo.txt
 Icon?
 ehthumbs.db
 Thumbs.db
+
+# Unity3D generated meta files
+*.pidb.meta
+
+# Unity3D Generated File On Crash Reports
+sysinfo.txt
+
+# Builds
+*.apk
+*.unitypackage

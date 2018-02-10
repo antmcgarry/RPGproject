@@ -23,6 +23,10 @@ public class CharacterCombat : MonoBehaviour {
         attackCooldown -= Time.deltaTime;
     }
 
+
+    /// <summary>
+    /// This methods handles the attack and takes in the paramters the characters stats of the object being attacked
+    /// </summary>
     public void Attack(CharacterStats targetStats)
     {
         if(attackCooldown <= 0f)

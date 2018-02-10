@@ -15,7 +15,7 @@ public class PlayerManager : MonoBehaviour {
 
     #endregion
 
-    public GameObject player;
+    public GameObject player; // This needs to be set on an Awake or Start for the player spawns
 
     public void KillPlayer()
     {

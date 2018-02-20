@@ -7,7 +7,7 @@ public class CharacterStats : MonoBehaviour {
 
     public Stat damage;
     public Stat armor;
-
+    public Stat attackRange;
     private void Awake ()
     {
         currentHealth = maxHealth;

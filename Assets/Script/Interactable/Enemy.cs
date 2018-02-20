@@ -17,9 +17,11 @@ public class Enemy : Interactable {
     public override void Interact()
     {
         base.Interact();
-        BattleManager battle = playerManager.player.GetComponent<BattleManager>();
-
-        battle.GetTarget(myStats, transform);
+        CharacterCombat playerCombat = playerManager.player.GetComponent<CharacterCombat>();
+        if(playerCombat != null)
+        {
+            playerCombat.Attack(myStats);
+        }
 
     }
 

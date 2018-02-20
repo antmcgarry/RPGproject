@@ -12,6 +12,7 @@ public class CharacterCombat : MonoBehaviour {
     public event System.Action OnAttack;
 
     CharacterStats myStats;
+    CharacterStats target;
 
     private void Start()
     {
@@ -21,6 +22,22 @@ public class CharacterCombat : MonoBehaviour {
     private void Update()
     {
         attackCooldown -= Time.deltaTime;
+
+        if (target)
+        {
+            Transform TargetPos = target.GetComponentInParent<Transform>();
+            float distance = Vector3.Distance(TargetPos.position, transform.position);
+
+            if (distance <= myStats.attackRange.GetValue())
+            {
+                Attack(target);
+            }
+            else
+            {
+                target = null;
+            }
+
+        }
     }
 
 
@@ -32,7 +49,7 @@ public class CharacterCombat : MonoBehaviour {
         if(attackCooldown <= 0f)
         {
             StartCoroutine(DoDamage(targetStats, attackDelay));
-
+            this.target = targetStats;
             if(OnAttack != null)
             {
                 OnAttack();

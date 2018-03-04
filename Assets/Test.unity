@@ -769,6 +769,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  inCombat: 0
   damage:
     baseValue: 0
   armor:
@@ -789,6 +790,7 @@ MonoBehaviour:
   attackSpeed: 1
   attackDelay: 2
   attackCooldown: 0
+  myStats: {fileID: 0}
 --- !u!1 &137146956
 GameObject:
   m_ObjectHideFlags: 0
@@ -2475,6 +2477,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 10
+  inCombat: 0
   damage:
     baseValue: 0
   armor:
@@ -2494,6 +2497,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 3
   interactionTranform: {fileID: 570056955}
+  isFocus: 0
 --- !u!114 &570056950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2508,6 +2512,7 @@ MonoBehaviour:
   attackSpeed: 1
   attackDelay: 0.6
   attackCooldown: 0
+  myStats: {fileID: 0}
 --- !u!114 &570056951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2576,7 +2581,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 570056947}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.12, y: -2.49, z: 2.38}
+  m_LocalPosition: {x: 1.58, y: -2, z: 16.58}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1662394532}
@@ -4481,6 +4486,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 0.6
   interactionTranform: {fileID: 1049939004}
+  isFocus: 0
   item: {fileID: 11400000, guid: 960deead7afc2874cb6799c777d8ab4e, type: 2}
 --- !u!65 &1049939002
 BoxCollider:
@@ -4814,6 +4820,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 3
   interactionTranform: {fileID: 1168818378}
+  isFocus: 0
 --- !u!23 &1168818375
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4910,6 +4917,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 0.4
   interactionTranform: {fileID: 1172106200}
+  isFocus: 0
   item: {fileID: 11400000, guid: 5e8c882c35542d14bb2dff3b4133f35a, type: 2}
 --- !u!65 &1172106198
 BoxCollider:
@@ -7600,6 +7608,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 3
   interactionTranform: {fileID: 1737189788}
+  isFocus: 0
 --- !u!114 &1737189782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7612,6 +7621,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 10
+  inCombat: 0
   damage:
     baseValue: 0
   armor:
@@ -7632,6 +7642,7 @@ MonoBehaviour:
   attackSpeed: 1
   attackDelay: 0.6
   attackCooldown: 0
+  myStats: {fileID: 0}
 --- !u!114 &1737189784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8890,6 +8901,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 0.6
   interactionTranform: {fileID: 2035351010}
+  isFocus: 0
   item: {fileID: 11400000, guid: 1d79bc9aa0a1a154d97a15ecb84cab23, type: 2}
 --- !u!65 &2035351008
 BoxCollider:

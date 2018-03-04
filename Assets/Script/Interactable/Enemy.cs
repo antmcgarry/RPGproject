@@ -6,23 +6,33 @@ using UnityEngine;
 public class Enemy : Interactable {
 
     PlayerManager playerManager;
-    CharacterStats myStats;
+    CharacterStats myStats; // EnemyStats
 
     private void Start()
     {
         playerManager = PlayerManager.instance;
         myStats = GetComponent<CharacterStats>();
     }
-
     public override void Interact()
     {
         base.Interact();
-        CharacterCombat playerCombat = playerManager.player.GetComponent<CharacterCombat>();
-        if(playerCombat != null)
-        {
-            playerCombat.Attack(myStats);
-        }
-
+        RepeatedlyAttack();
     }
 
+    private void Update()
+    {
+        RepeatedlyAttack();
+    }
+
+    void RepeatedlyAttack()
+    {
+        CharacterCombat playerCombat = playerManager.player.GetComponent<CharacterCombat>();
+        if (playerCombat != null)
+        {
+            if (isFocus && myStats.currentHealth > 0)
+            {
+                playerCombat.Attack(myStats);
+            }
+        }
+    }
 }

@@ -11,8 +11,7 @@ public class CharacterCombat : MonoBehaviour {
 
     public event System.Action OnAttack;
 
-    CharacterStats myStats;
-    CharacterStats target;
+   [SerializeField] CharacterStats myStats;
 
     private void Start()
     {
@@ -23,21 +22,6 @@ public class CharacterCombat : MonoBehaviour {
     {
         attackCooldown -= Time.deltaTime;
 
-        if (target)
-        {
-            Transform TargetPos = target.GetComponentInParent<Transform>();
-            float distance = Vector3.Distance(TargetPos.position, transform.position);
-
-            if (distance <= myStats.attackRange.GetValue())
-            {
-                Attack(target);
-            }
-            else
-            {
-                target = null;
-            }
-
-        }
     }
 
 
@@ -46,17 +30,16 @@ public class CharacterCombat : MonoBehaviour {
     /// </summary>
     public void Attack(CharacterStats targetStats)
     {
-        if(attackCooldown <= 0f)
+        if (attackCooldown <= 0f)
         {
             StartCoroutine(DoDamage(targetStats, attackDelay));
-            this.target = targetStats;
-            if(OnAttack != null)
+              
+            if (OnAttack != null)
             {
                 OnAttack();
             }
 
             attackCooldown = 1f / attackSpeed; // greater the attack speed the shorter cool down
-
         }
     }
 

@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4649498518535462}
   - component: {fileID: 137241890527143136}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Platelegs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
